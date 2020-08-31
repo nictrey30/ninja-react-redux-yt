@@ -22,7 +22,6 @@ class App extends Component {
     this.setState({
       todos: [...this.state.todos, todo]
     });
-    console.log(this.state);
   };
   render() {
     return (

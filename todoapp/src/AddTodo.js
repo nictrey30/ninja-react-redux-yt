@@ -14,14 +14,21 @@ class AddTodo extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.addTodo(this.state);
-    e.target.reset();
+    this.setState({
+      content: ''
+    });
   };
   render() {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
           <label htmlFor='addTodo'>Add new todo:</label>
-          <input type='text' id='addtodo' onChange={this.handleChange} />
+          <input
+            type='text'
+            id='addtodo'
+            onChange={this.handleChange}
+            value={this.state.content}
+          />
         </form>
       </div>
     );
