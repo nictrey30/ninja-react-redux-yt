@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, NavLink, withRouter } from 'react-router-dom';
 
+// withRouter - higher order component - adds functionality to Navbar - add props to the props object, so that we can have router information
 const Navbar = (props) => {
   console.log(props);
   return (
