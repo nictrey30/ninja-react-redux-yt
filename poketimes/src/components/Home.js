@@ -15,6 +15,7 @@ class Home extends Component {
     );
     let { data } = response;
     this.setState({
+      // keep the first 10 posts
       posts: data.slice(0, 10)
     });
   }
