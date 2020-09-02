@@ -23,7 +23,7 @@ const initState = {
   ]
 };
 
-const rootReducer = (state = initState, action) => {
+const rootReducer = (state = initState, action = {}) => {
   // console.log(action);
   switch (action.type) {
     case DELETE_POST:
