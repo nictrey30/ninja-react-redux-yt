@@ -8,6 +8,7 @@ import Post from './components/Post';
 
 function App() {
   return (
+    // we surround the App with BrowserRouter in order to use Routes
     <BrowserRouter>
       <div className='App'>
         <Navbar />

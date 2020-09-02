@@ -1,27 +1,11 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Pokeball from '../pokeball.png';
+import { connect } from 'react-redux';
 
 class Home extends Component {
-  constructor() {
-    super();
-    this.state = {
-      posts: []
-    };
-  }
-  async componentDidMount() {
-    let response = await axios.get(
-      'https://jsonplaceholder.typicode.com/posts'
-    );
-    let { data } = response;
-    this.setState({
-      // keep the first 10 posts
-      posts: data.slice(0, 10)
-    });
-  }
   render() {
-    const { posts } = this.state;
+    const { posts } = this.props;
     const postList = posts.length ? (
       posts.map((post) => {
         return (
@@ -48,4 +32,13 @@ class Home extends Component {
   }
 }
 
-export default Home;
+// in mapStateToProps we get access to the state of the store, so now we can grab stuff from the state and attach them to props
+const mapStateToProps = (state) => {
+  // the object returned represent the different properties we want to add to the props
+  return {
+    posts: state.posts
+  };
+};
+
+// if a component wants access to that store, then what we do is we take some data from the store and we map that data to the props of our component
+export default connect(mapStateToProps)(Home);
