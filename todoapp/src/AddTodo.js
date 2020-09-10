@@ -4,7 +4,6 @@ class AddTodo extends Component {
   constructor() {
     super();
     this.state = {
-      id: '',
       content: ''
     };
   }

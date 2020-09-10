@@ -15,6 +15,7 @@ const Todos = ({ todos, deleteTodo }) => {
       </div>
     ))
   ) : (
+    // when empty, todoList is a react.element with type of 'p'
     <p className='center'> You have no todos left!!</p>
   );
   return <div className='todos collection'>{todoList}</div>;

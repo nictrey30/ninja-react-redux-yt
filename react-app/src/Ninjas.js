@@ -3,9 +3,9 @@ import React from 'react';
 const Ninjas = ({ ninjas, deleteNinja }) => {
   return (
     <div className='ninja-list'>
-      {ninjas.map((ninja, index) => {
+      {ninjas.map((ninja) => {
         return ninja.age > 20 ? (
-          <div key={index}>
+          <div key={ninja.id}>
             Name: {ninja.name}, age: {ninja.age}, belt: {ninja.belt}
             <button
               style={{ marginLeft: '10px' }}
