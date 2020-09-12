@@ -11,6 +11,7 @@ class Post extends Component {
   }
   async componentDidMount() {
     // get the id from the props that the Router provides
+    console.log(this.props);
     let id = this.props.match.params.post_id;
     let response = await axios.get(
       'https://jsonplaceholder.typicode.com/posts/' + id

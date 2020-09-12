@@ -5,6 +5,7 @@ const initialState = {
   posts: []
 };
 // a reducer takes 2 parameters - a state and an action
+// when the reducer first interacts with the store, it's not gonna know the state, it's not gonna exist, so we need to first set an initial state
 const myreducer = (state = initialState, action = {}) => {
   switch (action.type) {
     case ADD_TODO:

@@ -2,6 +2,8 @@ import React from 'react';
 // for every component that the Router oads up, the Router attaches some extra information to th props object
 
 const Contact = (props) => {
+  console.log(props);
+  // programmatic redirects
   // setTimeout(() => {
   //   props.history.push('/about');
   // }, 2000);
