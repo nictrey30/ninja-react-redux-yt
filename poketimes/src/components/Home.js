@@ -33,6 +33,7 @@ class Home extends Component {
 }
 
 // in mapStateToProps we get access to the state of the store, so now we can grab stuff from the state and attach them to props
+// The first argument to a mapStateToProps function is the entire Redux store state (the same value returned by a call to store.getState()). Because of this, the first argument is traditionally just called state. (While you can give the argument any name you want, calling it store would be incorrect - it's the "state value", not the "store instance".)
 const mapStateToProps = (state) => {
   // the object returned represent the different properties we want to add to the props
   return {

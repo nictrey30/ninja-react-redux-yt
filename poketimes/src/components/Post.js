@@ -43,6 +43,8 @@ const mapDispatchToProps = (dispatch) => {
   // return what functions we gonna map to the component
   return {
     // takes the id of the post we want to delete
+    // first deletePost -> the prop that is passed down to the component
+    // second deletePost -> the action that get dispatched
     deletePost: (id) => {
       dispatch(deletePost(id));
     }
