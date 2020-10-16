@@ -8,7 +8,7 @@ const Rainbow = (WrappedComponent) => {
   const randomColor = colors[Math.floor(Math.random() * colors.length)];
   const classNameColor = `${randomColor}-text`;
 
-  // pass in the props from the component-parameter
+  // pass in the props from the WrappedComponent
   return (props) => {
     return (
       <div className={classNameColor}>
