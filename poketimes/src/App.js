@@ -11,7 +11,7 @@ function App() {
     <BrowserRouter>
       <div className='App'>
         <Navbar />
-        {/* at any point in time I only want one og these routes to take precedence */}
+        {/* at any point in time I only want one of these routes to take precedence */}
         <Switch>
           <Route exact path='/' component={Home} />
           <Route path='/about' component={About} />
